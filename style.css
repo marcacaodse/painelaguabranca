@@ -350,6 +350,20 @@ main {
     margin-bottom: 30px;
 }
 
+/* Chart Full Width Section */
+.chart-full-width {
+    margin-bottom: 30px;
+}
+
+.chart-full-width .chart-card {
+    width: 100%;
+}
+
+.chart-full-width .chart-container {
+    min-height: 400px;
+    overflow-x: auto;
+}
+
 .chart-card,
 .alert-card {
     background: var(--white);
