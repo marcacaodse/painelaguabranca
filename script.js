@@ -402,7 +402,7 @@ class ChartsManager {
                     borderColor: '#1976D2',
                     borderWidth: 2,
                     borderRadius: 8,
-                    barThickness: 50
+                    barThickness: 40
                 }]
             },
             options: {
@@ -421,6 +421,18 @@ class ChartsManager {
                                 return `Total: ${context.parsed.y} pacientes`;
                             }
                         }
+                    },
+                    datalabels: {
+                        anchor: 'center',
+                        align: 'center',
+                        color: '#ffffff',
+                        font: {
+                            weight: 'bold',
+                            size: 14
+                        },
+                        formatter: function(value) {
+                            return value;
+                        }
                     }
                 },
                 scales: {
@@ -428,6 +440,12 @@ class ChartsManager {
                         beginAtZero: true,
                         ticks: {
                             stepSize: 1
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            maxRotation: 45,
+                            minRotation: 45
                         }
                     }
                 }
@@ -456,7 +474,7 @@ class ChartsManager {
             return dateA - dateB;
         });
 
-        const displayDates = sortedDates.slice(-10);
+        const displayDates = sortedDates.slice(-20);
         const counts = displayDates.map(date => groupedByDate[date]);
 
         this.patientsChart.data.labels = displayDates;
