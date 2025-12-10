@@ -13,6 +13,7 @@
     
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
     
     <!-- SheetJS for Excel Export -->
     <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
@@ -126,14 +127,6 @@
 
         <!-- Charts and Alerts -->
         <section class="dashboard-grid">
-            <!-- Total Patients Chart -->
-            <div class="chart-card">
-                <h3 class="card-title"><i class="fas fa-chart-bar"></i> Total de Pacientes Agendados</h3>
-                <div class="chart-container" style="height: 300px;">
-                    <canvas id="patientsChart"></canvas>
-                </div>
-            </div>
-
             <!-- Days to Next Appointment -->
             <div class="chart-card">
                 <h3 class="card-title"><i class="fas fa-calendar-check"></i> Próximo Agendamento</h3>
@@ -149,6 +142,16 @@
                 <h3 class="card-title"><i class="fas fa-exclamation-triangle"></i> Alertas de Cota</h3>
                 <div id="quotaAlerts" class="alerts-container">
                     <p class="no-alerts">Nenhum alerta no momento</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Total Patients Chart -->
+        <section class="chart-full-width">
+            <div class="chart-card">
+                <h3 class="card-title"><i class="fas fa-chart-bar"></i> Total de Pacientes Agendados</h3>
+                <div class="chart-container" style="height: 400px;">
+                    <canvas id="patientsChart"></canvas>
                 </div>
             </div>
         </section>
